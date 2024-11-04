@@ -41,7 +41,7 @@ const consoleLog = (data) => {
             <div id = "wind">
                 <h3>Viento</h3>
                 <ul>
-                    <li>
+                    <li >
                         <h3>Rachas</h3>
                         <h3>${data.currentConditions.windgust}km/h</h3>
                     </li>
@@ -58,7 +58,7 @@ const consoleLog = (data) => {
                 <h2>${data.currentConditions.sunset}</h2>
             </div>
 
-            <div>
+            <div id = "precip">
                 <h3>Precipitación</h3>
                 <h2>${data.currentConditions.precip} mm</h2>
             </div>
@@ -74,9 +74,9 @@ const consoleLog = (data) => {
                 <h4>El punto de rocío es de ${data.currentConditions.dew}°</h4>
             </div>
 
-            <div id = ""pressure>
+            <div id = "pressure">
                 <h3>Presión</h3>
-                <h2>${data.currentConditions.pressure} hPa</h2>
+                <h2>${data.currentConditions.pressure}hPa</h2>
             </div>
 
             <div id = "snow">
@@ -87,6 +87,9 @@ const consoleLog = (data) => {
 
         </div>
     </main>
+    <footer>
+        <h3>Powered by JulioCesar</h3>
+    </footer>
     `
     //hacemos un bucle ya que los datos de la api del pronostico esta dentro de un array
     for (const day of data.days) {
@@ -103,10 +106,6 @@ const consoleLog = (data) => {
         
         document.querySelector("#lista").appendChild(li)
 }
-
-
-
-
 }
 
 export default fetchData
