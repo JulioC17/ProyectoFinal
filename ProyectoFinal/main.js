@@ -1,5 +1,4 @@
 import './style.css'
-import p from './main/main'
+import fetchData from './Componentes/main/main'
 
-document.querySelector("body").appendChild(p)
-
+fetchData()
