@@ -15,6 +15,17 @@ main{
     width: 380px;
 }
 
+#navBar{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    height: 20px;
+    width: 92%;
+    color: white;
+    font-size: 1.3rem;
+}
+
+
 #main{
     display: flex;
     flex-direction: column;
@@ -25,6 +36,7 @@ main{
     text-align: center;
     gap: 10px;
     color: white;
+    border: solid white 2px;
 }
 
 #temp{
@@ -69,6 +81,7 @@ main{
     justify-items: center;
     width: 90%;
     color: white;
+    
 }
 
 #otherStats div{
@@ -81,6 +94,7 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 #otherStats h2{
@@ -108,9 +122,4 @@ list-style-type: none;
 footer{
     margin-top: 20px;
     color: white;
-}
-
-body{
-    background-image: url(https://img.freepik.com/foto-gratis/lluvia-negro-abstracto-oscuro-poder_1127-2380.jpg?uid=R149661850&ga=GA1.1.328621596.1730735166&semt=ais_hybrid);
-    background-size: cover;
 }

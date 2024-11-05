@@ -1,9 +1,10 @@
 import './main.css' 
+import goBack from '../atrasBTn/atrasBtn'
 
 //RJSWAB9AEJ3MWXW4EF6UZAS2T
 //Hacemos el fetch a la api
-const fetchData = async () =>{
-    const data = await fetch ("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Valencia/?key=RJSWAB9AEJ3MWXW4EF6UZAS2T&unitGroup=metric&lang=es&iconSetvalues=icons1")
+const fetchData = async (ciudad) =>{
+    const data = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${ciudad}/?key=RJSWAB9AEJ3MWXW4EF6UZAS2T&unitGroup=metric&lang=es&iconSetvalues=icons1`)
     const results = await data.json()
     consoleLog(results)
 }
@@ -13,9 +14,13 @@ const consoleLog = (data) => {
     console.log(data);
 
     document.querySelector("body").innerHTML = `
+    <nav id = "navBar">
+        <button id = "atrasbtn" style = "cursor: pointer">Atrás</button>
+        <button id = "añadirbtn">Añadir</button>
+    </nav>
     <main>
         <div id = "main">   
-            <h1 id = "location">${data.address}</h1>
+            <h1 id = "location">${data.resolvedAddress}</h1>
             <h1 id = "temp">${data.currentConditions.temp}°</h1>
             <h2 id = "conditions">${data.currentConditions.conditions}</h2>
             <h2 id = "description">${data.description}</h2>
@@ -106,6 +111,9 @@ const consoleLog = (data) => {
         
         document.querySelector("#lista").appendChild(li)
 }
+
+        goBack()
 }
+
 
 export default fetchData
