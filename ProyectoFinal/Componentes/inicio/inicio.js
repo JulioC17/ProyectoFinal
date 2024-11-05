@@ -7,8 +7,7 @@ const inicio = () => {
             <input type = "text" placeholder = "Buscar una Ciudad" id = "input"></input>
             <button class = "findBtn">Buscar</button>
         </header>
-        <ul id = "cityList">
-        </ul>
+    
 `
 
 }

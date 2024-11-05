@@ -6,7 +6,6 @@ const showFindBtn = () => {
     const findBtn = document.querySelector(".findBtn")
     findInput.addEventListener("focus", () => {
         findBtn.style.display = "block"
-        console.log("hola");
         
     })
 
@@ -17,7 +16,7 @@ const showFindBtn = () => {
     })
         
     findBtn.addEventListener("click", (event) => {
-        event.stopPropagation
+        event.stopPropagation()
         fetchData(findInput.value)
         
 

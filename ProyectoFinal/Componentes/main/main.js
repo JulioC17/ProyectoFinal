@@ -1,5 +1,7 @@
 import './main.css' 
 import goBack from '../atrasBTn/atrasBtn'
+import changeWall from '../backgrounds/backgrounds'
+import addFav from '../añadirbtn/añadirbtn'
 
 //RJSWAB9AEJ3MWXW4EF6UZAS2T
 //Hacemos el fetch a la api
@@ -15,8 +17,8 @@ const consoleLog = (data) => {
 
     document.querySelector("body").innerHTML = `
     <nav id = "navBar">
-        <button id = "atrasbtn" style = "cursor: pointer">Atrás</button>
-        <button id = "añadirbtn">Añadir</button>
+        <span id = "atrasbtn" style = "cursor: pointer">Atrás</span>
+        <span id = "añadirbtn" style = "cursor: pointer">Añadir</span>
     </nav>
     <main>
         <div id = "main">   
@@ -111,9 +113,12 @@ const consoleLog = (data) => {
         
         document.querySelector("#lista").appendChild(li)
 }
-
+        
+        changeWall()
         goBack()
+        addFav()
 }
 
+;
 
 export default fetchData
