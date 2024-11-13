@@ -7,7 +7,7 @@ import fechaActual from '../fechaActual/fechaActual'
 //RJSWAB9AEJ3MWXW4EF6UZAS2T
 //Hacemos el fetch a la api
 const fetchData = async (ciudad) =>{
-    const data = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${ciudad}/?key=RJSWAB9AEJ3MWXW4EF6UZAS2T&unitGroup=metric&lang=es&iconSetvalues=icons1`)
+    const data = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${ciudad}/?key=${import.meta.env.VITE_CLIENT_ID}&unitGroup=metric&lang=es&iconSetvalues=icons1`)
     const results = await data.json()
     consoleLog(results)
 }

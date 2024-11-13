@@ -23,7 +23,7 @@ const renderFav = () => {
             divCity.classList.add("cards")
             
             const divFav = async () => {
-                const data = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/?key=RJSWAB9AEJ3MWXW4EF6UZAS2T&unitGroup=metric&lang=es&iconSetvalues=icons1`)
+                const data = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/?key=${import.meta.env.VITE_CLIENT_ID}&unitGroup=metric&lang=es&iconSetvalues=icons1`)
                 const results = await data.json()
 
                 divCity.innerHTML = `
