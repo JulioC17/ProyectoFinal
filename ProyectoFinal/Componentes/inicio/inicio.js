@@ -1,4 +1,5 @@
 import './inicio.css'
+import renderFav from '../renderFav/renderFav'
 
 const inicio = () => {
     document.querySelector("body").innerHTML = `
@@ -7,8 +8,9 @@ const inicio = () => {
             <input type = "text" placeholder = "Buscar una Ciudad" id = "input"></input>
             <button class = "findBtn">Buscar</button>
         </header>
-    
-`
+    `
+
+renderFav()
 
 }
 

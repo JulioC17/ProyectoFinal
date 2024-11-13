@@ -13,8 +13,6 @@ const fetchData = async (ciudad) =>{
 
 //aqui empezamos a pintar los datos en el main
 const consoleLog = (data) => {
-    console.log(data);
-
     document.querySelector("body").innerHTML = `
     <nav id = "navBar">
         <span id = "atrasbtn" style = "cursor: pointer">Atrás</span>
@@ -122,3 +120,5 @@ const consoleLog = (data) => {
 ;
 
 export default fetchData
+
+
