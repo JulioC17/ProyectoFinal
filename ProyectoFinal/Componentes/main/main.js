@@ -2,6 +2,7 @@ import './main.css'
 import goBack from '../atrasBTn/atrasBtn'
 import changeWall from '../backgrounds/backgrounds'
 import addFav from '../añadirbtn/añadirbtn'
+import fechaActual from '../fechaActual/fechaActual'
 
 //RJSWAB9AEJ3MWXW4EF6UZAS2T
 //Hacemos el fetch a la api
@@ -102,7 +103,7 @@ const consoleLog = (data) => {
         const dia = document.createElement("h3")
         const minima = document.createElement("h3")
         const maxima = document.createElement("h3")
-        dia.innerHTML = day.datetime
+        dia.innerHTML = fechaActual(day.datetime)
         minima.innerHTML = "min " + (day.tempmin) + "°"
         maxima.innerHTML = "max " + (day.tempmax) + "°"
         li.appendChild(dia)
@@ -110,7 +111,11 @@ const consoleLog = (data) => {
         li.appendChild(maxima)
         
         document.querySelector("#lista").appendChild(li)
+        
+        
 }
+
+
         
         changeWall()
         goBack()
