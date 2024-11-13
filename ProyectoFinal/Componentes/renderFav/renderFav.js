@@ -1,6 +1,6 @@
 import './renderfav.css'
 import addFav from '../añadirbtn/añadirbtn'
-
+import fetchData from '../main/main'
 
 
 const renderFav = () => {
@@ -38,6 +38,10 @@ const renderFav = () => {
                     </div>
                  `
             bigDiv.appendChild(divCity)
+            divCity.addEventListener("click", () => {
+                fetchData(city)
+                
+            })
 
             const textImage = results.currentConditions.conditions
             
