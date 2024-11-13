@@ -115,6 +115,16 @@ const consoleLog = (data) => {
         
 }
 
+const tabletRender = (data) => {
+    const body = document.querySelector("body")
+    const divTablet = document.createElement("div")
+    divTablet.classList.add("tablet")
+    divTablet.innerHTML = `
+    
+    `
+//esyamos haciendo las mediasqueries para tablet desde javascript. aqui ibamos a pintar excatamnete lo de arriba pero añadiendoselo a un div que estamos cre
+}
+
 
         
         changeWall()

@@ -48,5 +48,25 @@ h1{
 }
 
 @media  (min-width:820px){
-    
+     #title{
+        display: none;
+     } 
+     
+     #input{
+        width: 30%;
+        position:absolute;
+        right: 10px;
+        top:2px
+     }
+
+     .findBtn{
+        position: absolute;
+        right:10px ;
+        top:50px
+     }
+
+     .cityNot{
+        display: none;
+     }
+     
 }
