@@ -21,7 +21,7 @@ const consoleLog = (data) => {
     </nav>
     <main>
         <div id = "main">   
-            <h1 id = "location">${data.resolvedAddress}</h1>
+            <h1 id = "location">${data.resolvedAddress.split(",")[0].trim()}</h1>
             <h1 id = "temp">${data.currentConditions.temp}°</h1>
             <h2 id = "conditions">${data.currentConditions.conditions}</h2>
             <h2 id = "description">${data.description}</h2>

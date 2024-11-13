@@ -29,7 +29,7 @@ const renderFav = () => {
                 divCity.innerHTML = `
                     <button class = "eliminar">X</button>
                     <div class = "citiesFav">
-                        <h3>${results.address}</h3>
+                        <h3>${results.address.split(",")[0].trim()}</h3>
                         <h3>Sensación Térmica: ${results.currentConditions.feelslike}°</h3>
                         <h3 class = "conditions">${results.currentConditions.conditions}</h3>
                     </div>
@@ -40,6 +40,7 @@ const renderFav = () => {
             bigDiv.appendChild(divCity)
             divCity.addEventListener("click", () => {
                 fetchData(city)
+                
                 
             })
 
