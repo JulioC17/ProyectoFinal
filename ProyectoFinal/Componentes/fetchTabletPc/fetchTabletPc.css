@@ -1,0 +1,19 @@
+.renderTablet{
+    left: -120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#navBar{
+    position: relative;
+    left: -80px;
+    top: -20px;
+}
+
+footer{
+    text-align: center;
+}
+

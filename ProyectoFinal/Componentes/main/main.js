@@ -4,16 +4,12 @@ import changeWall from '../backgrounds/backgrounds'
 import addFav from '../añadirbtn/añadirbtn'
 import fechaActual from '../fechaActual/fechaActual'
 
-//RJSWAB9AEJ3MWXW4EF6UZAS2T
-//Hacemos el fetch a la api
-const fetchData = async (ciudad) =>{
+const fetchData = async (ciudad) =>{  //Esta funcion realiza el fetch para buscar los datos
     const data = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${ciudad}/?key=RJSWAB9AEJ3MWXW4EF6UZAS2T&unitGroup=metric&lang=es&iconSetvalues=icons1`)
     const results = await data.json()
     consoleLog(results)
 }
-
-//aqui empezamos a pintar los datos en el main
-const consoleLog = (data) => {
+const consoleLog = (data) => {    //esta funcion me pinta todo en la app de movil
     document.querySelector("body").innerHTML = `
     <nav id = "navBar">
         <span id = "atrasbtn" style = "cursor: pointer">Atrás</span>
@@ -97,7 +93,7 @@ const consoleLog = (data) => {
         <h3>Powered by JulioCesar</h3>
     </footer>
     `
-    //hacemos un bucle ya que los datos de la api del pronostico esta dentro de un array
+    //hacemos un bucle ya que los datos de la api del pronostico para 15 dias esta dentro de un array
     for (const day of data.days) {
         const li = document.createElement("li")
         const dia = document.createElement("h3")
@@ -111,28 +107,14 @@ const consoleLog = (data) => {
         li.appendChild(maxima)
         
         document.querySelector("#lista").appendChild(li)
-        
-        
-}
+    }
 
-const tabletRender = (data) => {
-    const body = document.querySelector("body")
-    const divTablet = document.createElement("div")
-    divTablet.classList.add("tablet")
-    divTablet.innerHTML = `
-    
-    `
-//esyamos haciendo las mediasqueries para tablet desde javascript. aqui ibamos a pintar excatamnete lo de arriba pero añadiendoselo a un div que estamos cre
+    changeWall()
+    goBack()
+    addFav()
 }
 
 
-        
-        changeWall()
-        goBack()
-        addFav()
-}
-
-;
 
 export default fetchData
 

@@ -1,12 +1,12 @@
 import './añadirbtn.css'
 
 
-const addFav = () => {
+const addFav = () => {  //funcion para manipular boton de añadir favoritos haciendo determinadas busquedas dentro del local storagge
     const addBtn = document.querySelector("#añadirbtn")
     const saveH1 = document.querySelector("#location").innerText
     
         addBtn.addEventListener("click", () => {
-            if (localStorage.getItem("favoritos") === null){
+            if (localStorage.getItem("favoritos") === null){   
                 const ciudadFav = []
                 ciudadFav.push(saveH1)
                 localStorage.setItem("favoritos", JSON.stringify(ciudadFav))

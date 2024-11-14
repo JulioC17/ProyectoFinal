@@ -65,8 +65,10 @@ h1{
         top:50px
      }
 
-     .cityNot{
-        display: none;
+
+     body{
+        display: flex;
+        flex-direction: row;
      }
      
 }

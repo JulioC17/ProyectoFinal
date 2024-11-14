@@ -1,6 +1,6 @@
 import './backgrounds.css'
 
-const changeWall = () => {
+const changeWall = () => { //esta funcion me cambia los backgrounds images en dependencia del resultado que este dando la api, basandose en el clima de ese momento
     const conditions = document.querySelector("#conditions")
     const body = document.querySelector("body")
 

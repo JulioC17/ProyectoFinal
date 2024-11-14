@@ -1,11 +1,18 @@
 import fetchData from "../main/main"
+import fetchDataTablet from "../fetchTabletPc/fetchTabletPc"
+import changeWall from "../backgrounds/backgrounds"
+import addFav from "../añadirbtn/añadirbtn"
 import "./showBtn.css"
-import fechaActual from "../fechaActual/fechaActual"
+import renderFav from "../renderFav/renderFav"
+import inicio from "../inicio/inicio"
 
-const showFindBtn = () => {
+const showFindBtn = () => { //obtiene los datos del input para llamar a las funciones encargadas de pintar los elementos (medias queries)
     
     const findInput = document.querySelector("#input")
     const findBtn = document.querySelector(".findBtn")
+    const body = document.querySelector("body")
+    const renderweather = document.createElement("div")
+    renderweather.classList.add("renderTablet")
     
     findInput.addEventListener("focus", () => {
         findBtn.style.display = "block"
@@ -25,11 +32,13 @@ const showFindBtn = () => {
         if(mediaQueryMovil.matches){
             fetchData(findInput.value)
         }else if (mediaQuerytablet.matches){
-           
-            
-            
-    }})
-
+            renderweather.innerHTML = ""
+            body.appendChild(renderweather)
+            fetchDataTablet(findInput.value)
+        }
+        
+    })
+    
 }
 
 export default showFindBtn

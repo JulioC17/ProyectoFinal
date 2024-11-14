@@ -3,7 +3,7 @@ import addFav from '../añadirbtn/añadirbtn'
 import fetchData from '../main/main'
 
 
-const renderFav = () => {
+const renderFav = () => { //funcion que pinta contenedores en el inicio de la app para mostrar previsualizaciones de las ciudades favoritas del usuario
     
     const body = document.querySelector("body")
     const bigDiv = document.createElement("div")
@@ -29,7 +29,7 @@ const renderFav = () => {
                 divCity.innerHTML = `
                     <button class = "eliminar">X</button>
                     <div class = "citiesFav">
-                        <h3>${results.address.split(",")[0].trim()}</h3>
+                        <h3 class = "ciudades">${results.address.split(",")[0].trim()}</h3>
                         <h3>Sensación Térmica: ${results.currentConditions.feelslike}°</h3>
                         <h3 class = "conditions">${results.currentConditions.conditions}</h3>
                     </div>
@@ -62,13 +62,10 @@ const renderFav = () => {
                     const renderCitiesUpdate = renderCities.filter(ciudad => ciudad !== city)
                     if (renderCitiesUpdate.length === 0){
                         localStorage.removeItem("favoritos")
-                        /* const favNot = document.createElement("h3")
-                        favNot.classList.add("cityNot")
-                        favNot.innerText = "No tienes ciudades favoritas"
-                        body.appendChild(favNot) */
+                    
                     }else{
                     localStorage.setItem("favoritos", JSON.stringify(renderCitiesUpdate))
-                }
+                    }
                     divCity.remove()
                     location.reload()
 
