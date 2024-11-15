@@ -40,7 +40,8 @@ h1{
     height: 40px;
     font-size: 1.3rem;
     text-align: center;
-    color:white
+    color:white;
+    width: 350px;
 }
 
 #input::placeholder{
@@ -51,12 +52,18 @@ h1{
      #title{
         display: none;
      } 
+
+     .cityNot{
+        display: none;
+        
+     }
      
      #input{
         width: 30%;
         position:absolute;
         right: 10px;
-        top:2px
+        top:2px;
+        
      }
 
      .findBtn{

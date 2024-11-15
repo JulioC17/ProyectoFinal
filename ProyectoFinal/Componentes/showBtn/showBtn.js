@@ -11,8 +11,8 @@ const showFindBtn = () => { //obtiene los datos del input para llamar a las func
     const findInput = document.querySelector("#input")
     const findBtn = document.querySelector(".findBtn")
     const body = document.querySelector("body")
-    const renderweather = document.createElement("div")
-    renderweather.classList.add("renderTablet")
+    const renderweather = document.createElement("div")  //es posible que se pueda eliminar
+    renderweather.classList.add("renderTablet") // es posible que se pueda eliminar
     
     findInput.addEventListener("focus", () => {
         findBtn.style.display = "block"
@@ -33,8 +33,9 @@ const showFindBtn = () => { //obtiene los datos del input para llamar a las func
             fetchData(findInput.value)
         }else if (mediaQuerytablet.matches){
             renderweather.innerHTML = ""
-            body.appendChild(renderweather)
+            /* body.appendChild(renderweather) */
             fetchDataTablet(findInput.value)
+            localStorage.setItem("backgroundImage", findInput.value)
         }
         
     })

@@ -1,6 +1,7 @@
 import './renderfav.css'
 import addFav from '../añadirbtn/añadirbtn'
 import fetchData from '../main/main'
+import fetchDataTablet from '../fetchTabletPc/fetchTabletPc'
 
 
 const renderFav = () => { //funcion que pinta contenedores en el inicio de la app para mostrar previsualizaciones de las ciudades favoritas del usuario
@@ -38,10 +39,13 @@ const renderFav = () => { //funcion que pinta contenedores en el inicio de la ap
                     </div>
                  `
             bigDiv.appendChild(divCity)
+            const mediaQuerytablet = window.matchMedia('(min-width:820px) and (max-width:1440px)')
             divCity.addEventListener("click", () => {
-                fetchData(city)
-                
-                
+                if(mediaQuerytablet.matches){
+                    fetchDataTablet(city)
+                }else{
+                    fetchData(city)
+                }
             })
 
             const textImage = results.currentConditions.conditions
@@ -62,7 +66,6 @@ const renderFav = () => { //funcion que pinta contenedores en el inicio de la ap
                     const renderCitiesUpdate = renderCities.filter(ciudad => ciudad !== city)
                     if (renderCitiesUpdate.length === 0){
                         localStorage.removeItem("favoritos")
-                    
                     }else{
                     localStorage.setItem("favoritos", JSON.stringify(renderCitiesUpdate))
                     }
@@ -71,9 +74,10 @@ const renderFav = () => { //funcion que pinta contenedores en el inicio de la ap
 
                     } )
                 })
-                
             }
             divFav()
+             
+            
             
             
     }
