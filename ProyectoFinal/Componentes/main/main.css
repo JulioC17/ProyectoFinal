@@ -130,7 +130,7 @@ main{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
@@ -155,6 +155,7 @@ list-style-type: none;
 #wind ul li{
     display: flex;
     justify-content: space-around;
+
 }
 
 footer{
@@ -162,12 +163,3 @@ footer{
     color: white;
 }
 
-@media (min-width:820px){
-    #añadirbtn{
-        position: absolute;
-        left:-30px;
-        top:15px
-    }
-
-    
-}

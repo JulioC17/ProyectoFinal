@@ -39,7 +39,7 @@ const renderFav = () => { //funcion que pinta contenedores en el inicio de la ap
                     </div>
                  `
             bigDiv.appendChild(divCity)
-            const mediaQuerytablet = window.matchMedia('(min-width:820px) and (max-width:1440px)')
+            const mediaQuerytablet = window.matchMedia('(min-width:1439px')
             divCity.addEventListener("click", () => {
                 if(mediaQuerytablet.matches){
                     fetchDataTablet(city)

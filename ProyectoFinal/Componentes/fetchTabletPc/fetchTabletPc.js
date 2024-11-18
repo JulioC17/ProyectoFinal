@@ -14,7 +14,7 @@ const renderTablet = (data) => {    //esta funcion me pinta todo en la app de Ta
     <nav id = "navBar">
         <span id = "añadirbtn" style = "cursor: pointer">Añadir</span>
     </nav>
-    <main>
+    <main id = "mainPc">
         <div id = "main">   
             <h1 id = "location">${data.resolvedAddress.split(",")[0].trim()}</h1>
             <h1 id = "temp">${data.currentConditions.temp}°</h1>

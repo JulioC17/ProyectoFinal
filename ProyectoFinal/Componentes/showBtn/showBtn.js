@@ -24,8 +24,8 @@ const showFindBtn = () => { //obtiene los datos del input para llamar a las func
             }
     })
         
-        const mediaQueryMovil = window.matchMedia('(max-width:819px)')
-        const mediaQuerytablet = window.matchMedia('(min-width:820px) and (max-width:1440px)')
+        const mediaQueryMovil = window.matchMedia('(max-width:1439px)')
+        const mediaQuerytablet = window.matchMedia('(min-width:1440px)')
 
         findBtn.addEventListener("click", (event) => {
         event.stopPropagation()

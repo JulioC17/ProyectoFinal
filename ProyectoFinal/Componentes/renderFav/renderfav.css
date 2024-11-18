@@ -84,7 +84,7 @@
     animation: mover-fondo 50s linear infinite;
  }
 
- @media  (min-width:820px){
+ @media  (min-width:1439px){
     .bigDiv{
         display: flex;
         justify-content: flex-start;
