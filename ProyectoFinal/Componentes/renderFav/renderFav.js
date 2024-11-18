@@ -2,6 +2,7 @@ import './renderfav.css'
 import addFav from '../añadirbtn/añadirbtn'
 import fetchData from '../main/main'
 import fetchDataTablet from '../fetchTabletPc/fetchTabletPc'
+import changeWall from '../backgrounds/backgrounds'
 
 
 const renderFav = () => { //funcion que pinta contenedores en el inicio de la app para mostrar previsualizaciones de las ciudades favoritas del usuario
@@ -58,7 +59,9 @@ const renderFav = () => { //funcion que pinta contenedores en el inicio de la ap
                 divCity.classList.add("cardSol")
             }else if(textImage === "Lluvia, Parcialmente nublado"){
                 divCity.classList.add("cardLloviendo")
-                } 
+            }else if(textImage === "Lluvia, Nublado"){
+                divCity.classList.add("cardLloviendo")
+            }
 
                 const buttons = divCity.querySelectorAll(".eliminar")
                 buttons.forEach(btn => {

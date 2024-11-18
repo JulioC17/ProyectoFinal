@@ -1,6 +1,6 @@
 .pn{
     background-image: url(https://st.depositphotos.com/1779390/1314/i/450/depositphotos_13145673-stock-photo-blue-sky-with-clouds-and.jpg);
-    background-size: cover;
+    background-size:cover;
 }
  .clouds {
     background-image: url(https://cdn.pixabay.com/photo/2017/04/19/09/07/air-2241569_1280.jpg);
@@ -14,7 +14,7 @@
 
  .lluvia{
    background-image: url(https://i.ytimg.com/vi/cWRSMyO0XKo/maxresdefault.jpg);
-   background-size:auto;
+   background-size:cover;
  }
 
  .pn, .clouds, .claro, .lluvia{

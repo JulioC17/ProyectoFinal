@@ -5,12 +5,19 @@ const changeWall = () => { //esta funcion me cambia los backgrounds images en de
     const body = document.querySelector("body")
 
     if(conditions.textContent == "Parcialmente nublado"){
+        body.className = ''
         body.classList.add("pn")
     }else if(conditions.textContent == "Nublado"){
+        body.className = ''
         body.classList.add("clouds")
     }else if(conditions.textContent == "Claro"){
+        body.className = ''
         body.classList.add("claro")
     }else if(conditions.textContent == "Lluvia, Parcialmente nublado"){
+        body.className = ''
+        body.classList.add("lluvia")
+    }else if(conditions.textContent == "Lluvia, Nublado"){
+        body.className = ''
         body.classList.add("lluvia")
     }
 }
