@@ -33,7 +33,7 @@ const showFindBtn = () => { //obtiene los datos del input para llamar a las func
             fetchData(findInput.value)
         }else if (mediaQuerytablet.matches){
             renderweather.innerHTML = ""
-            /* body.appendChild(renderweather) */
+            body.appendChild(renderweather)
             fetchDataTablet(findInput.value)
             localStorage.setItem("backgroundImage", findInput.value)
         }
