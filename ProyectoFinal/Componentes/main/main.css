@@ -41,11 +41,15 @@ main{
 }
 
 #atrasbtn:hover{
+    position: relative;
+    transform: scale(1.3);
     color: black;
     text-shadow: 2px 2px 5px rgb(255, 255, 255);
 }
 
 #añadirbtn:hover{
+    position: relative;
+    transform: scale(1.3);
     color: black;
     text-shadow: 2px 2px 5px rgb(255, 255, 255);
 }

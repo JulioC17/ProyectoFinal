@@ -5,10 +5,23 @@ import addFav from '../añadirbtn/añadirbtn'
 import fechaActual from '../fechaActual/fechaActual'
 
 const fetchData = async (ciudad) =>{  //Esta funcion realiza el fetch para buscar los datos
-    const data = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${ciudad}/?key=RJSWAB9AEJ3MWXW4EF6UZAS2T&unitGroup=metric&lang=es&iconSetvalues=icons1`)
-    const results = await data.json()
+    try{
+        const response = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${ciudad}/?key=RJSWAB9AEJ3MWXW4EF6UZAS2T&unitGroup=metric&lang=es&iconSetvalues=icons1`)
+    
+    if(!response.ok){
+        throw new Error (`Error en la API: ${response.status} ${response.statusText}`)
+    }
+
+    const results = await response.json()
+
     consoleLog(results)
+    
+    }catch (error) {
+        alert(`Error en la busqueda: ${error.message}`)
+    }
 }
+
+
 const consoleLog = (data) => {    //esta funcion me pinta todo en la app de movil
     document.querySelector("body").innerHTML = `
     <nav id = "navBar">
@@ -93,6 +106,9 @@ const consoleLog = (data) => {    //esta funcion me pinta todo en la app de movi
         <h3>Powered by JulioCesar</h3>
     </footer>
     `
+
+    console.log(data);
+    
     //hacemos un bucle ya que los datos de la api del pronostico para 15 dias esta dentro de un array
     for (const day of data.days) {
         const li = document.createElement("li")
@@ -118,4 +134,7 @@ const consoleLog = (data) => {    //esta funcion me pinta todo en la app de movi
 
 export default fetchData
 
-
+/* const fetchData = async (ciudad) =>{  //Esta funcion realiza el fetch para buscar los datos
+    const data = await fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${ciudad}/?key=RJSWAB9AEJ3MWXW4EF6UZAS2T&unitGroup=metric&lang=es&iconSetvalues=icons1`)
+    const results = await data.json()
+    consoleLog(results) */

@@ -1,9 +1,4 @@
 import './renderfav.css'
-import addFav from '../añadirbtn/añadirbtn'
-import fetchData from '../main/main'
-import fetchDataTablet from '../fetchTabletPc/fetchTabletPc'
-import changeWall from '../backgrounds/backgrounds'
-
 
 const renderFav = () => { //funcion que pinta contenedores en el inicio de la app para mostrar previsualizaciones de las ciudades favoritas del usuario
     
@@ -40,14 +35,7 @@ const renderFav = () => { //funcion que pinta contenedores en el inicio de la ap
                     </div>
                  `
             bigDiv.appendChild(divCity)
-            const mediaQuerytablet = window.matchMedia('(min-width:1439px')
-            divCity.addEventListener("click", () => {
-                if(mediaQuerytablet.matches){
-                    fetchDataTablet(city)
-                }else{
-                    fetchData(city)
-                }
-            })
+            
 
             const textImage = results.currentConditions.conditions
             

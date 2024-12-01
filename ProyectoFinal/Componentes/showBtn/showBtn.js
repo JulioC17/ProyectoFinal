@@ -1,12 +1,7 @@
 import fetchData from "../main/main"
-import fetchDataTablet from "../fetchTabletPc/fetchTabletPc"
-import changeWall from "../backgrounds/backgrounds"
-import addFav from "../añadirbtn/añadirbtn"
 import "./showBtn.css"
-import renderFav from "../renderFav/renderFav"
-import inicio from "../inicio/inicio"
 
-const showFindBtn = () => { //obtiene los datos del input para llamar a las funciones encargadas de pintar los elementos (medias queries)
+const showFindBtn = () => { //obtiene los datos del input para llamar a las funciones encargadas de pintar los elementos
     
     const findInput = document.querySelector("#input")
     const findBtn = document.querySelector(".findBtn")
@@ -21,25 +16,19 @@ const showFindBtn = () => { //obtiene los datos del input para llamar a las func
     document.addEventListener("click", (event) => {
         if(event.target !== findInput && event.target !== event.findBtn){
                 findBtn.style.display = "none"
-            }
-    })
-        
-        const mediaQueryMovil = window.matchMedia('(max-width:1439px)')
-        const mediaQuerytablet = window.matchMedia('(min-width:1440px)')
-
-        findBtn.addEventListener("click", (event) => {
-        event.stopPropagation()
-        if(mediaQueryMovil.matches){
-            fetchData(findInput.value)
-        }else if (mediaQuerytablet.matches){
-            renderweather.innerHTML = ""
-            /* body.appendChild(renderweather) */
-            fetchDataTablet(findInput.value)
-            localStorage.setItem("backgroundImage", findInput.value)
         }
-        
+    })
+
+    findBtn.addEventListener("click", (event) => {
+    event.stopPropagation()
+            if(findInput.value.length == 0){
+                alert("Escribe algo...")
+            }else{
+                fetchData(findInput.value)
+            }
     })
     
 }
 
 export default showFindBtn
+

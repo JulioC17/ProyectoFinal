@@ -1,3 +1,8 @@
+.ciudades{
+    color: rgb(17, 186, 1);
+    font-size: 1.8rem;
+}
+
 .cityNot{
     color: white;
     position: absolute;
@@ -86,28 +91,16 @@
 
  @media  (min-width:1439px){
     .bigDiv{
-        display: flex;
-        justify-content: flex-start;
-        width: 250px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        padding: 10px;
+        gap: 40px;
     }
-
     
-
     .cards{
-        box-shadow: 5px 5px 5px rgba(5, 5, 5, 0.5);
-        width: 250px;
+        box-shadow: 1px 1px 20px rgb(255, 255, 255);
+        width: 600px;
+        height: 200px;
+        font-size: 1.3rem;
     }
-    
-
-
-    
-    
- }
+}
 
 
 
