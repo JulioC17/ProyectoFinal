@@ -25,7 +25,6 @@ const fetchData = async (ciudad) =>{  //Esta funcion realiza el fetch para busca
     }
 }
 
-
 const consoleLog = (data) => {    //esta funcion me pinta todo en la app de movil
     document.querySelector("body").innerHTML = `
     <nav id = "navBar">
