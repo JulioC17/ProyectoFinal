@@ -21,6 +21,7 @@
     width: 90%;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
 .cards{
@@ -37,6 +38,14 @@
     border-radius: 20px;
     text-shadow: 2px 2px 5px rgba(5, 5, 5, 1);
     width: 350px;
+    box-shadow: 1px 1px 20px rgb(255, 255, 255);
+    transition: 0.2s;
+    height: 180px;
+}
+
+.cards:hover{
+    box-shadow: 1px 1px 40px rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .citiesFav{

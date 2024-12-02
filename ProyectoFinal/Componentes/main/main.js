@@ -17,7 +17,11 @@ const fetchData = async (ciudad) =>{  //Esta funcion realiza el fetch para busca
     consoleLog(results)
     
     }catch (error) {
+        if(error.message == 'Failed to fetch'){
+            alert("Ciudad Eliminada")
+        }else{
         alert(`Error en la busqueda: ${error.message}`)
+        }
     }
 }
 
@@ -106,8 +110,6 @@ const consoleLog = (data) => {    //esta funcion me pinta todo en la app de movi
         <h3>Powered by JulioCesar</h3>
     </footer>
     `
-
-    console.log(data);
     
     //hacemos un bucle ya que los datos de la api del pronostico para 15 dias esta dentro de un array
     for (const day of data.days) {

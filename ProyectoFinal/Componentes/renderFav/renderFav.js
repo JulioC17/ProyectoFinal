@@ -1,3 +1,4 @@
+import fetchData from '../main/main'
 import './renderfav.css'
 
 const renderFav = () => { //funcion que pinta contenedores en el inicio de la app para mostrar previsualizaciones de las ciudades favoritas del usuario
@@ -35,6 +36,10 @@ const renderFav = () => { //funcion que pinta contenedores en el inicio de la ap
                     </div>
                  `
             bigDiv.appendChild(divCity)
+
+            divCity.addEventListener("click", () => {
+                fetchData(results.address)
+            })
             
 
             const textImage = results.currentConditions.conditions
